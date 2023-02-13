@@ -7,11 +7,11 @@ export default defineConfig({
     'react-dev-inspector/plugins/umi/react-inspector',
   ],
   // https://github.com/zthxxx/react-dev-inspector#inspector-loader-props
-  inspectorConfig: {
-    exclude: [],
-    babelPlugins: [],
-    babelOptions: {},
-  },
+  // inspectorConfig: {
+  //   exclude: [],
+  //   babelPlugins: [],
+  //   babelOptions: {},
+  // },
   define: {
     API_URL: 'http://127.0.0.1:8000',
   },
