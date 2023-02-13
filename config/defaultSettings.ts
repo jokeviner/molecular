@@ -15,7 +15,7 @@ const Settings: LayoutSettings & {
   title: ' ', //'Molecular Pro',
   pwa: false,
   headerHeight: 60,
-  logo: '/images/molecular1.png',
+  logo: './images/molecular1.png',
   iconfontUrl: '',
 
   menu: {
