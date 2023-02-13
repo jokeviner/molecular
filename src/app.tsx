@@ -8,6 +8,8 @@ import Footer from '@/components/Footer';
 import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
 import defaultSettings from '../config/defaultSettings';
+import { ConfigProvider } from 'antd';
+ConfigProvider.config({ theme: { primaryColor: '#722ED1' } });
 
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
@@ -59,7 +61,7 @@ export async function getInitialState(): Promise<{
 export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
   return {
     rightRender: () => <></>,
-    rightContentRender: () =><></>,// <RightContent />,
+    rightContentRender: () => <></>, // <RightContent />,
     disableContentMargin: false,
     waterMarkProps: {
       // content: initialState?.currentUser?.name,
@@ -90,24 +92,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     // 增加一个 loading 的状态
     childrenRender: (children, props) => {
       if (initialState?.loading) return <PageLoading />;
-      return (
-        <>
-          {children}
-          {!props.location?.pathname?.includes('/login') && (
-            <SettingDrawer
-              disableUrlParams
-              enableDarkTheme
-              settings={initialState?.settings}
-              onSettingChange={(settings) => {
-                setInitialState((preInitialState) => ({
-                  ...preInitialState,
-                  settings,
-                }));
-              }}
-            />
-          )}
-        </>
-      );
+      return <>{children}</>;
     },
     ...initialState?.settings,
   };

@@ -11,6 +11,6 @@ export default defineConfig({
   ],
   // https://github.com/zthxxx/react-dev-inspector#inspector-loader-props
   define: {
-    API_URL: 'http://127.0.0.1:8000',
+    API_URL: 'https://m1.littlebrother.icu',
   },
 });
