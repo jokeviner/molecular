@@ -348,7 +348,7 @@ export default defineConfig({
   ignoreMomentLocale: true,
   proxy: proxy[REACT_APP_ENV || 'dev'],
   manifest: {
-    basePath: '/molecular/',
+    basePath: '/',
   },
   // Fast Refresh 热更新
   fastRefresh: {},
