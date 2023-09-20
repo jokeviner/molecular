@@ -130,7 +130,7 @@ export default () => {
             change('start');
           }}
         >
-          <div className={styles.title}>侧端基-前</div>
+          <div className={styles.title}>End-group</div>
           {molecular.start && <FG item={molecular.start} itemDelete={deleteFG} />}
         </ProCard>
         <Divider type="vertical" />
@@ -141,7 +141,7 @@ export default () => {
             change('core');
           }}
         >
-          <div className={styles.title}>中间核</div>
+          <div className={styles.title}>Core</div>
 
           <FGList
             items={molecular.core}
@@ -160,7 +160,7 @@ export default () => {
             change('end');
           }}
         >
-          <div className={styles.title}>侧端基-后</div>
+          <div className={styles.title}>End-group</div>
 
           {molecular.end && <FG item={molecular.end} itemDelete={deleteFG} />}
         </ProCard>
@@ -173,7 +173,7 @@ export default () => {
             change('side');
           }}
         >
-          <div className={styles.title}>侧链</div>
+          <div className={styles.title}>Side-chains</div>
 
           {molecular.side && <FG item={molecular.side} itemDelete={deleteFG} />}
         </ProCard>
@@ -181,7 +181,7 @@ export default () => {
       <ProCard colSpan={24} gutter={[24, 0]}>
         <ProCard colSpan={4} ghost layout="center" direction="column">
           <Button type="primary" size="large" block onClick={inference}>
-            计算{' '}
+            Calculate{' '}
           </Button>
         </ProCard>
         <ProCard colSpan={4} ghost layout="center" direction="column">
